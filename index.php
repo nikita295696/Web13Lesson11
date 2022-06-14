@@ -1,5 +1,6 @@
 <?php
 
+include_once "functions.php";
 // Главная страница с формой и таблицой с содержимым папки uploads
 
 ?>
