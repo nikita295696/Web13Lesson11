@@ -34,7 +34,7 @@ echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
 <body>
 
     <?php
-    // include_once "views/uploads_form.php";
+    include_once "views/uploads_form.php";
     include_once "views/table.php";
     ?>
     <script src="./scripts/upload-form.js"></script>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const URL = "http://localhost/hw/sad/api/upload-files.php";
+  const URL = "./api/upload-files.php";
   const uploadFrom = document.forms.uploadForm;
   const fileInput = document.querySelector("#file_input");
   const uploadedFiles = document.querySelector(".uploaded_files");
@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function handlerSubmit(e, fileInput, URL) {
   e.preventDefault();
+
+  const files = fileInput.files;
+  const fromData = new FormData();
+  fromData.append("files", files);
+
+  sendRequest(URL, FormData);
 }
 
 async function sendRequest(url, data) {
