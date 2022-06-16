@@ -37,7 +37,7 @@ foreach ($files as $file) {
     <tbody>
         <?php foreach ($currDirectory as $key => $file) { ?>
             <tr>
-                <?= $file?>
+                <a href="<?= $file?>" download><?= $file?></a>
                 <td><form method="POST"><input type="hidden" name="path_delete" value="<?=$path . "/" . $files[$key + 1]?>"><input type="submit" value="Delete"></form></td>
             </tr>
         <?php } ?>
