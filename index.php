@@ -2,6 +2,10 @@
 
 include_once "functions.php";
 // Главная страница с формой и таблицой с содержимым папки uploads
+if (!isAuth()) {
+    header("Location: auth.php");
+}
+echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
 ?>
 
 <!doctype html>
@@ -22,6 +26,7 @@ include_once "functions.php";
     include_once "views/table.php";
     ?>
     <script src="./scripts/upload-form.js"></script>
+
 </body>
 
 </html>
