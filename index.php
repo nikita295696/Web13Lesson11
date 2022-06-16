@@ -13,11 +13,23 @@ include_once "functions.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        a{
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        p{
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
 
     <?php
-    include_once "views/uploads_form.php";
+    // include_once "views/uploads_form.php";
     include_once "views/table.php";
     ?>
 
