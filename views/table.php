@@ -35,7 +35,6 @@ foreach ($files as $file) {
         </tr>
     </thead>
     <tbody>
-
         <?php foreach ($currDirectory as $key => $file) { ?>
             <tr>
                 <?= $file?>
