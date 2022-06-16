@@ -11,7 +11,7 @@
     </thead>
     <tbody>
     <tr>
-        <td><a href="?current_dir=uploads">..</a></td>
+        <td><a href="?current_dir=uploads">...</a></td>
     </tr>
         <tr>
 
