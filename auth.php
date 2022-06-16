@@ -108,7 +108,7 @@
         formData.append("login", login);
         formData.append("password", password);
 
-        let response = await fetch("http://localhost/lesson11/Web13Lesson11/authCheck.php",{
+        let response = await fetch("authCheck.php",{
             method: "POST",
             body: formData,
         });
@@ -116,7 +116,7 @@
         let answer = await response.json();
 
         if (answer == "ok") {
-            window.location = "http://localhost/lesson11/Web13Lesson11/index.php";
+            window.location = "index.php";
         } else {
             formDiv.innerHTML = "Такого пользователя не существует, либо введены неверные данные";
             form.appendChild(formDiv);
