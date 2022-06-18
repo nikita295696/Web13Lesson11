@@ -1,5 +1,17 @@
 <?php
 
-$files = $_POST["files"] ?? "";
+const BASE_DIRECTORY = "./uploads";
 
-echo json_encode($files);
+$files = $_FILES["files"];
+$path = $_GET["current_dir"] ?? BASE_DIRECTORY;
+
+foreach ($files["tmp_name"] as $key => $value) {
+
+    if ($path != "undefined") {
+        $targetPath = "." . $path . "/" . time() .  "_" . basename($files["name"][$key]);
+        move_uploaded_file($value, $targetPath);
+    } else {
+        $targetPath = "." . BASE_DIRECTORY . "/" . time() .  "_" . basename($files["name"][$key]);
+        move_uploaded_file($value, $targetPath);
+    }
+}
