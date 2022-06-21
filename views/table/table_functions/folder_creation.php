@@ -22,7 +22,10 @@ if (count($_POST) > 0) {
             $_SESSION["error_msg"] = "Папка с таким именем уже существует";
             session_write_close();
         }
+<<<<<<< HEAD:views/table_functions/folder_creation.php
 
         $_POST = [];
+=======
+>>>>>>> dev:views/table/table_functions/folder_creation.php
     }
 }

@@ -21,6 +21,7 @@
 
 .btn {
   display: block;
+  margin: 0 auto;
   padding: 6px 12px;
   width: max-content;
   border: none;
