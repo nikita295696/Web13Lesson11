@@ -1,14 +1,31 @@
 <?php
 
+use custom_name\Test;
+use sub_dir\Test as TestSubDir;
+
+spl_autoload_register(function ($class){
+    $fileName = "$class.php";
+
+    if($class == "custom_name\Test"){
+        include_once "models\Test.php";
+    }else{
+        if(file_exists($fileName)){
+            include_once $fileName;
+        }
+    }
+
+
+});
+
+$test = new Test();
+$test2 = new TestSubDir();
+
 include_once "functions.php";
 // Главная страница с формой и таблицой с содержимым папки uploads
 if (!isAuth()) {
     header("Location: auth.php");
 }
-echo "<div style='text-align: right'>
-        <a href='exit.php'>Exit</a>
-        <a href='settings.php'>Settings</a>
-    </div>";
+
 ?>
 
 <!doctype html>
@@ -37,6 +54,12 @@ echo "<div style='text-align: right'>
 
 <body>
 
+<?php
+echo "<div style='text-align: right'>
+    <a href='exit.php'>Exit</a>
+    <a href='settings.php'>Settings</a>
+</div>";
+?>
     <?php
     include_once "views/uploads_form.php";
 
