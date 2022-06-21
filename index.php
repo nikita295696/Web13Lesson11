@@ -5,7 +5,10 @@ include_once "functions.php";
 if (!isAuth()) {
     header("Location: auth.php");
 }
-echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
+echo "<div style='text-align: right'>
+        <a href='exit.php'>Exit</a>
+        <a href='settings.php'>Settings</a>
+    </div>";
 ?>
 
 <!doctype html>
@@ -18,12 +21,13 @@ echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
     <link rel="stylesheet" href="./styles/main-styles.css">
     <title>Document</title>
     <style>
-        a{
+        a {
             font-size: 24px;
             display: flex;
             align-items: center;
         }
-        p{
+
+        p {
             font-size: 24px;
             display: flex;
             align-items: center;
@@ -34,10 +38,15 @@ echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
 <body>
 
     <?php
-    // include_once "views/uploads_form.php";
+    include_once "views/uploads_form.php";
+
     include_once "views/table.php";
+
+    include_once "views/table/table.php";
+
     ?>
     <script src="./scripts/upload-form.js"></script>
+    <script src="./scripts/modal_script.js"></script>
 
 </body>
 
