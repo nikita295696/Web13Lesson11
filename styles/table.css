@@ -1,0 +1,44 @@
+table {
+  margin: 60px auto;
+  width: 600px;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 10px;
+}
+
+table input[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 12px;
+  width: max-content;
+  border: none;
+  border-radius: 10px;
+  background-color: #212121;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+table input[type="submit"]:hover {
+  outline: 2px solid #212121;
+  background-color: transparent;
+  color: #212121;
+}
+
+.create_dir_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.create_dir_form input[type="text"] {
+  padding: 6px 10px;
+}
+

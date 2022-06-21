@@ -8,6 +8,5 @@ if (count($_POST) > 0) {
             $_SESSION["error_msg"] = "Папка с таким именем уже существует";
             session_write_close();
         }
-        $_POST = [];
     }
 }

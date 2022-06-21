@@ -11,7 +11,7 @@
 
         <label for="file_input" class="btn">
             <p>Click to add file</p>
-            <input type="file" id="file_input" multiple="multiple">
+            <input type="file" name="files" id="file_input" multiple="multiple">
         </label>
 
         <div class="uploaded_files">
