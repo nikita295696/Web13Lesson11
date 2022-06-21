@@ -5,7 +5,10 @@ include_once "functions.php";
 if (!isAuth()) {
     header("Location: auth.php");
 }
-echo "<div style='text-align: right'><a href='exit.php'>Exit</a></div>";
+echo "<div style='text-align: right'>
+        <a href='exit.php'>Exit</a>
+        <a href='settings.php'>Settings</a>
+    </div>";
 ?>
 
 <!doctype html>
