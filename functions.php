@@ -32,3 +32,16 @@ function login($users){
 
     return false;
 }
+function setJSON($users){
+    $strJSON = json_encode($users);
+    file_put_contents("users.json", $strJSON);
+}
+function checkLogin($users, $arr) {
+    $flag = true;
+    foreach ($users as $user) {
+        if ($arr["loginNew"] == $user["login"]) {
+            $flag = false;
+        }
+    }
+    return $flag;
+}
