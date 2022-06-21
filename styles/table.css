@@ -1,0 +1,88 @@
+.table_body{
+    width: 600px;
+    margin: auto;
+}
+.table_body form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rename_modal_window {
+    width: 300px;
+    height: 130px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -65px;
+    margin-left: -150px;
+    background-color: white;
+    padding: 16px;
+    border: 2px solid #212121;
+    border-radius: 5px;
+    display: none;
+}
+.rename_modal_window .exitModal{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.rename_modal_window .exitModal button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 2px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #212121;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rename_modal_window .exitModal button:hover {
+    outline: 2px solid #212121;
+    background-color: transparent;
+    color: #212121;
+  }
+
+.is_open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rename_modal_window [type=text], .table_body form [type=text] {
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    border: 2px solid #212121;
+    border-radius: 5px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.rename_modal_window [type=submit], .table_body form [type=submit], .rename_modal{
+    display: block;
+    padding: 4px 10px;
+    width: max-content;
+    border: none;
+    border-radius: 10px;
+    background-color: #212121;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 2.5px;
+}
+.rename_modal_window [type=submit]:hover, .table_body form [type=submit]:hover, .rename_modal:hover {
+    outline: 2px solid #212121;
+    background-color: transparent;
+    color: #212121;
+  }
