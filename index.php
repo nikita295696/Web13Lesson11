@@ -42,7 +42,6 @@ echo "<div style='text-align: right'>
 
     include_once "views/table.php";
 
-    include_once "views/table/table.php";
 
     ?>
     <script src="./scripts/upload-form.js"></script>

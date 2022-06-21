@@ -1,7 +1,7 @@
 <?php
-include_once "table_functions/folder_creation.php";
-include_once "table_functions/path_delete.php";
-include_once "table_functions/folder_rename.php";
+include_once "table/table_functions/folder_creation.php";
+include_once "table/table_functions/path_delete.php";
+include_once "table/table_functions/folder_rename.php";
 $path = "./uploads";
 $files = array_diff(scandir($path), array('.', '..'));
 $check = false;
@@ -37,6 +37,11 @@ if (isset($_SESSION["error_msg"])) {
     echo $_SESSION["error_msg"];
 }
 ?>
+<style>
+    p{
+        display: inline-block;
+    }
+</style>
 
 <div class="container">
     <div class="table_body">
@@ -78,25 +83,3 @@ if (isset($_SESSION["error_msg"])) {
 
 </div>
 
-<style>
-    p{
-        display: inline-block;
-    }
-</style>
-
-<table>
-    <thead>
-    <tr>
-        <th>name</th>
-        <th>operation</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($currDirectory as $key => $file) { ?>
-        <tr>
-            <a href="<?= $file?>" download><?= $file?></a>
-            <td><form method="POST"><input type="hidden" name="path_delete" value="<?=$path . "/" . $files[$key + 1]?>"><input type="submit" value="Delete"></form></td>
-        </tr>
-    <?php } ?>
-    </tbody>
-</table>
