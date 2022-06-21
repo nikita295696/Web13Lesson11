@@ -20,12 +20,17 @@ foreach ($files as $file) {
         $currDirectory[] = "<td><p><img src='./views/icons/file.png' alt='file'> $file</p></td>";
     }
 }
+
+if (isset($_SESSION["error_msg"])) {
+    echo $_SESSION["error_msg"];
+}
 ?>
 <form method="POST">
     <input type="text" name="folder_name">
     <input type="hidden" name="folder_path" value="<?=$path?>">
     <input type="submit" value="Create">
 </form>
+
 
 <table>
     <thead>
