@@ -32,6 +32,10 @@ foreach ($files as $file) {
     }
 }
 
+if (isset($_SESSION["error_msg"])) {
+    echo $_SESSION["error_msg"];
+}
+
 ?>
 <div class="container">
     <div class="table_body">
@@ -72,6 +76,7 @@ foreach ($files as $file) {
     </div>
 
 </div>
+
 
 <table>
     <thead>
